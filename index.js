@@ -24,7 +24,7 @@ Repo.prototype.template = function() {    // Repo Prototype
 
 
 function getIssues(data) {
-  fetch(`${baseApi}/repos/${fork}/issue`).
+  fetch(`${baseApi}/repos${fork}/issue`).
     then(resp => {
       resp.json().
       then(data => {

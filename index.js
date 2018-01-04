@@ -1,3 +1,5 @@
+const repoURL = '/javascript-fetch-lab';
+
 function getIssues() {
 }
 

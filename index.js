@@ -1,5 +1,5 @@
 const userName = ''
-const baseApi = 'https://api.github.com'
+const baseApi = 'https://api.github.com/'
 const fork = `${userName}/javascript-fetch-lab`
 
 function Issue(attributes) {          //     Issue Object
@@ -46,7 +46,7 @@ function createIssue() {
   const issueTitle = document.getElementById('title').value
   const issueBody = document.getElementById('body').value
   const postData = { title: issueTitle, body: issueBody }
-  fetch(`blahblah${baseApi}/repos/${fork}/issues`, {
+  fetch(`${baseApi}/repos/${fork}/issues`, {
     method: 'post',
     headers: {
       'Authorization': `token ${getToken()}`

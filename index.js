@@ -55,8 +55,8 @@ function createIssue() {
   }).then(resp => getIssues())
 }
 
-function showResults(json) {
-}
+// function showResults(json) {
+// }
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'

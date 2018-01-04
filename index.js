@@ -1,17 +1,26 @@
-const userName = 'jeffwhenderson'
+const userName = ''
 const baseApi = 'https://api.github.com'
 const fork = `${userName}/javascript-fetch-lab`
 
-function Issue(attributes) {
+function Issue(attributes) {          //     Issue Object
   this.title = attributes.title
   this.body = attributes.body
   this.url = attributes.url
 }
 
-function Repo(attributes) {
+Issue.prototype.template = function(){   // Issue Prototype
+   var template = `<li>Title: <a href="${this.url}">${this.title} </a><span> | Body: ${this.body}</span></li>`
+   return template;
+};
+
+function Repo(attributes) {             //      Repo Object
   this.url = attributes.url
 }
 
+Repo.prototype.template = function() {    // Repo Prototype
+  var template = `<h3>Forked Successfully!</h3><a href="${this.url}"> ${this.url}</a>`
+  return template;
+}
 
 
 function getIssues(data) {

@@ -8,7 +8,9 @@ function Issue(attributes) {
   this.url = attributes.url
 }
 
-
+function Repo(attributes) {
+  this.url = attributes.url
+}
 
 
 
